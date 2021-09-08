@@ -1,0 +1,24 @@
+package com.First;
+
+import java.util.List;
+import java.util.function.IntPredicate;
+import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.IntStream;
+
+public class PredicateDemo1 {
+
+	public static void main(String[] args) {
+		PrintMessage printMessage = ()-> System.out.println("Print message new way");
+		printMessage.printMsg();
+		
+		IntPredicate predicate = new IntPredicate() {
+			@Override
+			public boolean test(int value) {
+				return value % 2 == 0;
+			}
+		};
+		
+		IntStream.rangeClosed(1,100).filter(predicate).forEach(num -> System.out.println(num));
+	}
+}

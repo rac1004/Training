@@ -1,0 +1,23 @@
+package com.First;
+import java.util.function.Predicate;
+
+public class PredicateDemo {
+
+	//public static void main(String[] args) {
+		//Predicate<Integer> lesserthan = i ->(i<18);
+		//System.out.println(lesserthan.test(100));
+	//}
+	
+	//******************************************************
+	
+	static void pred(int number , Predicate<Integer> predicate)
+	{
+		if(predicate.test(number)) {
+			System.out.println("Number" +number);
+		}
+	}
+	
+	public static void main(String[] args) {
+		pred(10,(i) -> i >7);
+	}
+}

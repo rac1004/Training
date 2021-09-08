@@ -1,0 +1,14 @@
+package com.First;
+
+public class PrintMsgNewClass {
+		
+	public static void main(String[] args) {
+	 PrintMessage printMessage = new PrintMessage() {
+		 @Override
+		 public void printMsg() {
+		 System.out.println("Print Message New Class");
+	 }
+}; 
+		printMessage.printMsg();
+	}
+}
